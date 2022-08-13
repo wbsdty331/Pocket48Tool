@@ -263,7 +263,8 @@ namespace Pocket48Tool
                         DateTimeOffset dto = DateTimeOffset.FromUnixTimeMilliseconds(livestarttime);
                         //DateTime dt02 = dto.LocalDateTime;
                         //MessageBox.Show(dto.LocalDateTime.ToString("F"));
-                        commandText.Text = "ffmpeg -i" + " " + jobj["content"]["playStreamPath"] + " -c copy " + "\"" + @"D:\pocket48\" + jobj["content"]["user"]["userName"] + "-" + dto.LocalDateTime.ToString("yyyy-MM-dd HH-mm-ss") + ".mp4" + "\"";
+                        commandText.Text = "ffmpeg" + " -user_agent " + "\"" + "SNH48 ENGINE" + "\"" + " -i " + jobj["content"]["playStreamPath"] + " -c copy " + "\"" + @"D:\pocket48\" + jobj["content"]["user"]["userName"] + "-" + dto.LocalDateTime.ToString("yyyy-MM-dd HH-mm-ss") + ".mp4" + "\"";
+
                     }
                     else
                     {
